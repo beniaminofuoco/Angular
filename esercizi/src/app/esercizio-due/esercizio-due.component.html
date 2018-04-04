@@ -1,0 +1,5 @@
+<input type="text" class="form-control" [(ngModel)]="username">
+<p>The Username is: {{username}}</p>
+<button class="btn btn-primary"
+  [disabled]="getFlg()"
+  (click)="reset()"> Reset </button>

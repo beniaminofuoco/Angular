@@ -1,5 +1,15 @@
-<button class="btn btn-primary"
-  [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<label>Server Name</label>
+<!--Legame unidirezionale input-text -> metodo, 
+  se diamo un valore a serverName non viene inizialmente considerato. 
+  Se il valore viene modificato tramite l'input text il valore si aggiorna-->
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)">-->
+
+<!--Legame bidirezionale input-text <->serverName , 
+  se diamo un valore a serverName viene associato al campo e
+  se questo valore cambia si aggiorna -->
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<!-- <p>{{ serverName }}</p> -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
 <!-- <p [innerText]="allowNewServer"></p> -->
 <p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
