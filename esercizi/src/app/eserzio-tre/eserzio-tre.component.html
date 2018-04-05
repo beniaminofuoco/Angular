@@ -1,0 +1,6 @@
+<button class="btn btn-primary" (click)="onClick()"> Dysplay Details </button>
+<p *ngIf="flg">Show or Hide</p>
+<!--Alla variabile i = index -> index parte da 0 -->
+<div *ngFor="let logItem of log; let i =index" 
+  [ngStyle]="{backgroundColor : i >= 4 ? 'blue' : 'transparent'}" 
+  [ngClass]="{'white-text': i >= 4}">{{ logItem}}</div>

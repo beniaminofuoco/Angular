@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { EsercizioDueComponent } from './esercizio-due/esercizio-due.component';
+import { EserzioTreComponent } from './eserzio-tre/eserzio-tre.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { EsercizioDueComponent } from './esercizio-due/esercizio-due.component';
     AppComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-    EsercizioDueComponent
+    EsercizioDueComponent,
+    EserzioTreComponent
   ],
   imports: [
     BrowserModule,
