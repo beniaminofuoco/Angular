@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
 import { UsersServices } from './users.services';
+import { CounterService } from './counter.service';
 
 
 @NgModule({
@@ -17,7 +16,7 @@ import { UsersServices } from './users.services';
   imports: [
     BrowserModule
   ],
-  providers: [UsersServices],
+  providers: [CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
