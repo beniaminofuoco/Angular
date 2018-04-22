@@ -14,20 +14,16 @@
            Optionally, display it in your template.
       -->
       <form (ngSubmit)="onSubmit()" #f="ngForm">
-        <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
-
           <div class="form-group">
             <label for="email">Mail</label>
             <input type="email" id="email" class="form-control" ngModel name="email" required email 
               #email="ngModel">
           </div>
-
           <div class="form-group">
             <label for="password">Password</label>
             <input type="password" id="password" class="form-control" ngModel name="password" required 
               password #password="ngModel">
           </div>
-
           <div class="form-group">
             <label for="level">Security Level</label>
             <select id="level" class="form-control" [ngModel]="defaultLevel" name="level">
@@ -36,14 +32,11 @@
               <option value="pro">Pro</option>
             </select>
           </div>
-
-          <span class="help-block" *ngIf="!email.valid && !password.valid && 
-            email.touched && password.touched">
+          <span class="help-block" *ngIf="(!email.valid && email.touched) ||  (!password.valid && 
+             password.touched)">
             Please compile all forml!
           </span>
-
           <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button>
-        </div>
       </form>
     </div>
   </div>
@@ -51,9 +44,9 @@
   <div class="row" *ngIf="submitted">
     <div class="col-xs-12">
       <h3>Your Data</h3>
-      <p>Mail: {{ user.email }} </p>
-      <p>Password: {{ user.secret }} </p>
-      <p>Level: {{ user.answer }}</p>
+      <p>Mail: {{ dati.email }} </p>
+      <p>Password: {{ dati.password }} </p>
+      <p>Level: {{ dati.level }}</p>
     </div>
   </div>
 </div>
